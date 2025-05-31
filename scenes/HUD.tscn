@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfxcb505l403s"]
+
+[ext_resource type="FontFile" uid="uid://8d3tybkoy26d" path="res://Font/MedodicaRegular.otf" id="1_sd512"]
+
+[node name="Hud" type="CanvasLayer"]
+
+[node name="CoinLabel" type="Label" parent="."]
+offset_top = 54.0
+offset_right = 150.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(1, 0.917647, 0, 1)
+theme_override_fonts/font = ExtResource("1_sd512")
+theme_override_font_sizes/font_size = 50
+text = "Coins: 0"
+
+[node name="WinCondition" type="Label" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -326.0
+offset_right = 428.0
+offset_bottom = -271.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.917647, 0, 1)
+theme_override_fonts/font = ExtResource("1_sd512")
+theme_override_font_sizes/font_size = 50
+text = "Collect 9 coins to win!"

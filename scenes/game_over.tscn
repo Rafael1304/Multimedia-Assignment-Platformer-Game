@@ -1,0 +1,118 @@
+[gd_scene load_steps=11 format=3 uid="uid://dj61gjq4fv0ys"]
+
+[ext_resource type="Script" uid="uid://b5lemacjjkr0k" path="res://Scripts/game_over.gd" id="1_eoghk"]
+[ext_resource type="Texture2D" uid="uid://cekrpdy2rsity" path="res://Sprites/Spritesheet/8670616.jpg" id="2_14u15"]
+[ext_resource type="FontFile" uid="uid://sulm7ueyhsob" path="res://Font/joystix/joystix monospace.otf" id="3_rjluv"]
+[ext_resource type="FontFile" uid="uid://8d3tybkoy26d" path="res://Font/MedodicaRegular.otf" id="4_gjtdd"]
+[ext_resource type="AudioStream" uid="uid://b3ltukllu2ui4" path="res://Sound/CallToAdventure.mp3" id="5_14u15"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j3ryr"]
+texture = ExtResource("2_14u15")
+modulate_color = Color(0.605274, 0.605274, 0.605274, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rjluv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjtdd"]
+bg_color = Color(0.775063, 0.775063, 0.775063, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uylih"]
+bg_color = Color(0.485703, 0.485704, 0.485703, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3817r"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eoghk")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_j3ryr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = -126.0
+offset_right = 253.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rjluv")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rjluv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gjtdd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uylih")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3817r")
+text = "MAIN MENU"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rjluv")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rjluv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gjtdd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uylih")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3817r")
+text = "EXIT"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -270.0
+offset_right = 382.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_gjtdd")
+theme_override_font_sizes/font_size = 60
+text = "Game Over 
+Thank You For Playing our Game!!"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_14u15")
+autoplay = true
+bus = &"Main Menu Music"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_exit_pressed"]
