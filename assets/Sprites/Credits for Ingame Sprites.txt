@@ -1,7 +1,7 @@
 Monster Sprite: https://yoake16.itch.io/monster-killer
-Start screen background: https://www.freepik.com/free-vector/arcade-game-world-pixel-scene_4815143.htm#fromView=keyword&page=1&position=0&uuid=5e762ad2-2835-4c96-8e14-fbf4b331b69a&query=Pixel+Game+Background
-Game Over screen background: https://www.freepik.com/free-vector/flat-design-pixel-art-food-illustration_38680536.htm#fromView=keyword&page=1&position=2&uuid=3cdc0435-0217-41ac-8480-a98e113cfdaa&query=Pixel+Art+Celebration
+38680536.htm#fromView=keyword&page=1&position=2&uuid=3cdc0435-0217-41ac-8480-a98e113cfdaa&query=Pixel+Art+Celebration
 Knight sprite n animations: https://github.com/Brackeys/first-game-in-godot/tree/main/First%20Game/assets
 Coin animation: https://github.com/Brackeys/first-game-in-godot/tree/main/First%20Game/assets
 Platform Sprite: https://github.com/Brackeys/first-game-in-godot/tree/main/First%20Game/assets
 Background Sprites(in game): https://opengameart.org/content/generic-platformer-tiles
+Start screen and Game over screen bg:https://arexxuru.itch.io/parallax-battle-rpg-backgrounds
